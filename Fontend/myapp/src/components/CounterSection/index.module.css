@@ -1,0 +1,39 @@
+/* CounterSection.module.css */
+
+.counterSection {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.counterGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.counterItem {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.counterItem:hover {
+    transform: translateY(-5px);
+}
+
+.counterItem span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.counterItem p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #666;
+}

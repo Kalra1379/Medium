@@ -1,0 +1,146 @@
+/* VideoSection.module.css */
+
+.videoSection {
+    background-color: #1a1a1a;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.videoSection h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.videoContainer {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.playerWrapper {
+    flex: 2;
+    position: relative;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.playerWrapper>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.customControls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.customControls button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.progressBar {
+    flex-grow: 1;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: #ff0000;
+}
+
+.videoInfo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 50%;
+}
+
+.videoInfo h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.videoInfo p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.playlist {
+    flex: 1;
+    margin-left: 2rem;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.playlistItem {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.playlistItem:hover,
+.playlistItem.active {
+    background-color: #3a3a3a;
+}
+
+.playlistItem img {
+    width: 120px;
+    height: 67.5px;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+.playlistItemInfo {
+    padding: 10px;
+}
+
+.playlistItemInfo h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.playlistItemInfo p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .videoContainer {
+        flex-direction: column;
+    }
+    .playlist {
+        margin-left: 0;
+        margin-top: 2rem;
+        max-height: none;
+    }
+}
